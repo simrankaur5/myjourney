@@ -1,0 +1,607 @@
+/*REFERENCES OF CODE I HAVE USED IN MY WEBSITE*/
+/*
+I learnt and applied most of the CSS properties in my website and put them in my CSS style sheet from w3schools:
+'CSS Properties', [Source code]. 
+Available: https://www.w3schools.com/cssref/default.asp [Accessed:4-12-2017 - 29-12-2017]
+
+I used this example to implement "parallax scrolling" to my website:
+'How TO - Parallax Scrolling', [Source code]. 
+Available: https://www.w3schools.com/howto/howto_css_parallax.asp [Accessed: 19-12-2017]
+
+The map image
+I made this image using google earth:<br> [Online]. 
+Available: https://www.google.com/maps/@4.847996,17.163444,8475104m/data=!3m1!1e3  [Accessed: 10-12-2017]
+
+I used this example for my gallery slideshow:
+'How TO -Slideshow', [Source code]. 
+Available: https://www.w3schools.com/howto/howto_js_slideshow.asp [Accessed:20-12-2017]
+
+I learnt how to use "opacity" property so that the background images were not too bright:
+'CSS opacity Property', [Source code].
+Available: https://www.w3schools.com/cssref/css3_pr_opacity.asp [Accessed:27-12-2017]
+
+I used this example to style my "dialogue box" for the interesting facts about the countries:</h5>
+'Custom style to jquery ui dialogs', 2014. [Source code].<br> Available:  https://stackoverflow.com/questions/17386839/custom-style-to-jquery-ui-dialogs [Accessed: 20-12-2017]
+
+I used "@media query" to adjust my pages when the screen is minimised i.e. mobile phones. I learnt how to use it from w3schools:
+'CSS @media Rule', [Source code]. 
+Available:  https://www.w3schools.com/cssref/css3_pr_mediaquery.asp [Accessed:27-12-2017]
+*/
+
+
+body, html 
+{
+    height: 100%;  /*height of the body and html*/
+    margin: 0;     /*margin of the body and html*/
+    font: 400 15px/1.8 "Lato", sans-serif; /*font of the body and html and the font family*/
+    color: gray; /*font  colour of the body and html*/
+}
+
+/*used as heading in school differences*/
+h1
+{
+    font: 27px "Lato", sans-serif;  
+    text-align: center; /*heading "h1" is aligned in the centre in each section*/
+}
+
+/*used as sub-headings in school differences*/
+h2
+{
+    font: 19px "Lato", sans-serif; /*font and font family of heading "h2"*/
+}
+
+/*used as heading in the first page*/
+h3 
+{
+    letter-spacing: 5px;  /*spaces between each letter in heading "h3"*/
+    text-transform: uppercase; /*heading "h3" should be in uppercase letters*/
+    text-align:center;  /*heading "h3" is aligned in the centre in each section*/
+    font: 20px "Lato", sans-serif;  /*font and font family of heading "h3"*/
+    color: gray;          /*font colour of heading "h3"*/      
+}
+
+/*position of my name on the first page*/
+.name 
+{
+    position: absolute; /*my name positioned relative to its first positioned ancestor element*/
+    right: 100px;  /*my name positioned to the right side*/
+    top: 46%;   /*my name from the top 46%*/
+    text-align: right;  /*my name is on the right side of the page*/
+}
+
+/*styling my name*/
+.name span.textstyle 
+{
+    color: white; /*headings colour*/
+    padding: 20px; /*generate space around the my name*/
+    font-size: 45px; /*font size of my name*/
+    letter-spacing: 10px; /*spaces between letters in my name*/
+}
+
+/*style for headings on each page*/
+.caption span.textstyle 
+{
+    position: absolute; /*headings positioned relative to their first positioned ancestor element*/
+    padding: 18px; /*generate space around the headings*/
+    font-size: 30px; /*headings font size*/
+    letter-spacing: 10px; /*spaces between each letter in headings*/
+    background-color:transparent; /*tranparency in the headings*/
+    color: white; /*headings colour*/
+    right: 190px; /*headings positioned to the right side by 190px*/
+    top: 40%;  /*headings from the top 40%*/
+    text-align: right; /*headings positioned to the right of the page*/
+}
+
+/*making every background image (bg images) the same*/
+.me, .tanzanialondon, .myschool, .schooldifferences, .placestravelled, .differentlifestyles, .gallery 
+{
+    position: relative;  /*bg images relative to their normal position*/
+    opacity: 0.65;  /*applied opacity to bg images*/
+    background-repeat: no-repeat;  /*bg images not repeated*/
+    background-attachment: fixed;  /*bg images are fixed to page*/
+    background-position: center; /*starting position of bg images*/
+    background-size: cover; /*bg images size*/
+}
+
+/*background images for each section*/
+.me 
+{
+    background-image: url("../images/me.jpg");  /*bg image from my files*/
+    min-height: 100%; /*minimum height of the bg image*/
+}
+
+.tanzanialondon 
+{
+    background-image: url("../images/background.jpg"); /*bg image from my files*/
+    min-height: 400px; /*minimum height of the bg image*/
+}
+
+.myschool 
+{
+    background-image: url("../images/virgoFidelis.jpg"); /*bg image from my files*/
+    min-height: 400px; /*minimum height of the bg image*/
+}
+
+.schooldifferences
+{
+    background-image: url("../images/lakeSecondarySchool.png"); /*bg image from my files*/
+    min-height: 400px; /*minimum height of the bg image*/
+}
+
+.placestravelled
+{
+    background-image: url("../images/holidaysbg.jpg"); /*bg image from my files*/
+    min-height: 400px; /*minimum height of the bg image*/
+}
+
+.differentlifestyles
+{
+    background-image: url("../images/journey.jpg"); /*bg image from my files*/
+    min-height: 400px; /*minimum height of the bg image*/
+}
+
+.gallery
+{
+    background-image: url("../images/me2.jpg"); /*bg image from my files*/
+    min-height: 400px; /*minimum height of the bg image*/
+}
+
+/*styling content on first page about myself and work experience*/
+#workexperience
+{
+    color: gray; /*content colour*/
+    background-color: black; /*bg colour for the section*/
+    text-align: center; /*content centered*/
+    padding: 50px 80px;  /*generate space around the content*/
+    text-align: justify;  /*change spacing around the content*/
+}
+
+/*my map image*/
+#mapimage
+{
+    width: 70%; /*width of image*/
+    height: 550px; /*height of image*/
+    padding-left: 250px; /*generate space around the image*/
+    border-radius: 0px; /*no round corners*/
+}
+
+/*content on second page (my journey)*/
+#infoblackbox
+{
+    color:gray; /*content colour*/
+    background-color:black; /*black background for section*/
+    padding:50px 80px; /*generate space around the content*/
+    text-align: left; /*content positioned to left of page*/
+    height: 640px; /*height of the whole section*/
+}
+
+/*hide text in dialog box by default until an aeroplane icon is clicked*/
+.hidetext
+{
+    display: none;
+}
+
+/*dialog box content*/
+.ui-widget-content 
+{
+    background: black;  /*dialog box background colour*/
+    border: 2px solid gray; /*dialog box border thickness and colour*/
+    color: gray; /*dialog box text colour*/
+    font: 17px "Lato", sans-serif; /*dialog box font and font family*/
+}
+
+/*dialog box header*/
+.ui-widget-header 
+{
+    background: gray; /*dialog box header background colour*/
+    padding-left: 245px; /*close button in header pushed to the top right corner*/
+}
+
+/*styling content on each page*/
+.infoaboutschool, #infoaboutholidays, #infoaboutlifestyle, #infoaboutgallery
+{
+    color: gray; /*content colour*/
+    background-color:black; /*black background for section*/
+    text-align:center; /*content centered*/
+    padding:50px 80px; /*generate space around the content*/
+    text-align: justify; /*change spacing around the content*/
+    overflow:auto; /*scroll bar added if overflow clipped*/
+}
+
+/*styling images with content next to it (school life, my holidays in tanzania & london, difference in lifestyle)*/
+img
+{
+    border-radius: 50px; /*round corners*/
+    border-style: none; /*no border*/
+    width: 200px; /*width of images*/
+    height: 200px; /*height of images*/
+    float: left;  /*images positioned to left*/               
+}
+
+/*styling whole div that has image and content together*/
+.educationDiv, .holidayDiv, .lifestyleDiv
+{
+    float:left;  /*div positioned to left*/ 
+    padding-top: 25px;  /*top padding (space) for div*/
+}
+
+/*styling of content*/
+.education, .holidays, .lifestyle
+{
+    float:none; /*content displayed where it occurs in the text(default)*/
+    padding-left: 250px; /*left padding (space) for content*/
+}
+
+
+/*my gallery SLIDESHOW*/
+
+/*styling pictures in my gallery*/
+.width
+{
+    border-radius: 50px; /*round corners*/
+    border-style: none; /*no border*/
+    width: 100%; /*width of pictures*/
+    height: 500px; /*height of pictures*/
+    float: left;  /*pictures positioned to left*/                  
+}
+
+/*every slide in slideshow*/
+.mySlides 
+{
+    display:none; /*display no picture by default*/
+}
+
+/*every picture in slideshow*/
+img 
+{
+    vertical-align: middle; /*picture placed in the middle of parent element*/
+}
+
+/*Slideshow container*/
+.slideshow-container 
+{
+  max-width: 1000px; /*max width of pictures*/
+  position: relative; /*pictures relative to their normal position*/
+  margin: auto; /*browser to calculate margin*/
+}
+
+/*Next & previous button in slideshow*/
+.prev, .next 
+{
+  cursor: pointer; /*cursor is a pointer*/
+  position: absolute; /*buttons are positioned relative to their first positioned ancestor element*/
+  top: 30%; /*buttons from the top 30%*/
+  padding: 39px; /*generate space around buttons*/
+  color: white; /*colour of buttons*/
+  font-weight: bold; /*thickness of buttons*/
+  font-size: 55px; /*size of buttons*/
+}
+
+/*Position the "next button" to the right*/
+.next 
+{
+  right: 0;
+}
+
+/*On hover, add a black background color with a little bit see-through*/
+.prev:hover, .next:hover 
+{
+  background-color: black;
+}
+
+/*<figcaption> text style*/
+.imageInfo
+{
+  color: gray; /*colour of information about picture*/
+  font-size: 15px; /*text size of information*/
+  font-style: italic; /*text style is italic*/
+  text-align: center; /*text positioned in centre */
+}
+
+/* The dots/circles/indicators bottom of pictures*/
+.dot 
+{
+  cursor: pointer; /*cursor is a pointer*/
+  height: 15px; /*height of circles*/
+  width: 15px; /*width of circles*/
+  margin: 2px; /*all 4 margins are 2px*/
+  background-color: gray; /*colour of circles*/
+  border-radius: 50%;  /*round corners*/
+  display: inline-block; /*Displays circles as an inline-level block container*/
+  transition: background-color 0.5s ease;  /*change background colour to white in 0.5s*/
+}
+
+/*on hover, add a white background color to circles*/
+.active, .dot:hover 
+{
+  background-color: white; 
+}
+
+/*Fading animation for pictures in slideshow*/
+
+.fade 
+{
+  -webkit-animation-name: fade;  /*attach "fade" animation*/
+  -webkit-animation-duration: 1.5s; /*set duration to 1.5s*/
+  animation-name: fade; /*attach "fade" animation*/
+  animation-duration: 1.5s; /*set duration to 1.5s*/
+}
+
+/*keyframe to define style to be applied within "fade" animation*/
+/*2 keyframes for the "fade" animation*/
+@-webkit-keyframes fade 
+{
+  from {opacity: 0.4}  /*start of "fade" animation*/
+  to {opacity: 1} /*end of "fade" animation*/
+}
+
+@keyframes fade 
+{
+  from {opacity: .4} /*start of "fade" animation*/
+  to {opacity: 1} /*end of "fade" animation*/
+}
+
+/*As Some mobile devices have a problem with background-attachment: fixed I therefore
+Turn off parallax scrolling for tablets and phones.*/
+@media only screen and (max-width: 600px) 
+{
+    /*all sections background scroll instead of fixed*/
+    .me, .tanzanialondon, .myschool, .schooldifferences, .placestravelled, .differentlifestyles, .gallery 
+    {
+        background-attachment: scroll;  
+    }
+}
+
+/*On smaller screens, decrease text size for buttons and content*/
+@media only screen and (max-width: 500px) 
+{
+  .prev, .next,.text 
+    {
+        font-size: 20px
+    }
+    
+   .width 
+    {
+        width: 200%
+    }
+}
+
+/*On smaller screens, hide horizontal scroll bar*/
+@media only screen and (max-width: 500px)
+{
+    body,html
+    {
+       overflow-x: hidden; 
+    }
+}
+
+/*On smaller screens, adjusting heading "h3"*/
+@media only screen and (max-width: 500px)
+{
+    h3
+    {
+        margin-right: -100px; /*right margin of h3*/
+        padding-right: 100px; /*right padding (space) around h3*/
+    }
+}
+
+/* On smaller screens, adjusting 'hello, i'm'*/
+@media only screen and (max-width: 500px)
+{
+    .caption span.textstyle
+    {
+        right: 2px; /*hello, i'm positioned to the right side by 2px*/
+        top: 20%; /*hello, i'm from the top 46%*/
+        text-align: right; /*hello, i'm is on the right side of the page*/
+    }
+}
+
+/*On smaller screens, adjusting 'my name'*/
+@media only screen and (max-width: 500px)
+{
+    .name 
+    {
+        right: 2px; /*my name positioned to the right side by 2px*/
+        top: 33.5%;  /*my name from the top 46%*/
+        text-align: right;  /*my name is on the right side of the page*/
+    }
+}
+
+/*On smaller screens, adjusting 'about myself and work experience' section */
+@media only screen and (max-width: 500px)
+{
+    #workexperience
+    {
+        margin-left: -70px;  /*left margin of this section*/
+        padding-right: 10px;  /*left padding (space) around this section*/
+    }
+}
+
+/* On smaller screens, adjusting the map image*/
+@media only screen and (max-width: 500px)
+{
+    #mapimage
+    {
+        width: 200%;  /*width of image*/
+        height: 300px; /*height of image*/
+        margin-left: -387px;  /*left margin of the image*/
+        border-radius: 50px; /*round corners*/
+    } 
+}
+
+/* On smaller screens, adjusting the content for the page 'my journey'*/
+@media only screen and (max-width: 500px)
+{
+    #mediamap
+    {
+        margin-left: -70px; /*left margin of content*/
+        text-align: left; /*positioning content on left of page*/
+    }
+}
+
+/* On smaller screens, adjusting the height for the page 'my journey'*/
+@media only screen and (max-width: 500px)
+{
+    #infoblackbox
+    {
+        height: 530px;
+    }
+}
+
+/* On smaller screens, hiding SOME content for the page 'my journey' by default*/
+@media only screen and (max-width: 1500px)
+{
+    #hidetext
+    {
+        display: none;
+    }
+}
+
+/* On smaller screens, adjusting the content for the page 'my school'*/
+@media only screen and (max-width: 500px)
+{
+    .education
+    {
+        margin-left: -310px; /*left margin of content*/
+        float:left; /*content floats to left of its div*/
+        text-align: left; /*positioning content on left of page*/
+    }
+}
+
+/* On smaller screens, adjusting the content for the page 'school differences'*/
+@media only screen and (max-width: 500px)
+{
+    .mediaeducation
+    {
+        margin-left: -70px; /*left margin of content*/
+        text-align: left; /*positioning content on left of page*/
+    }
+}
+
+/* On smaller screens, adjusting the sub-heading "h2" for the page 'school differences'*/
+@media only screen and (max-width: 500px)
+{
+    h2
+    {
+        margin-left: -80.5px; /*left margin of content*/
+        text-align: center; /*positioning content in center of page*/
+    }
+}
+
+/* On smaller screens, adjusting content for the page 'holidays in tanzania and london'*/
+@media only screen and (max-width: 500px)
+{
+    .holidays
+    {
+        margin-left: -310px; /*left margin of content*/
+        float:left; /*content positioned to left*/ 
+        text-align: left;  /*positioning content on left of page*/
+    }
+}
+
+@media only screen and (max-width: 500px)
+{
+    #mediaholidays
+    {
+        margin-left: -70px; /*left margin of content*/
+        text-align: left; /*positioning content on left of page*/
+    }
+}
+
+/* On smaller screens, adjusting content for the page 'difference in lifestyle'*/
+@media only screen and (max-width: 500px)
+{
+    .lifestyle
+    {
+        margin-left: -310px; /*left margin of content*/
+        float:left; /*content positioned to left*/ 
+        text-align: left; /*positioning content on left of page*/
+    }
+}
+ 
+/* On smaller screens, adjusting images with content next to it (school life, my holidays in tanzania & london, difference in lifestyle)*/
+@media only screen and (max-width: 500px)
+{
+    img
+    {
+        margin-left: -50px; /*left margin of images*/
+    }
+}
+
+/*On smaller screens, adjusting images with content for the page 'my gallery'*/
+@media only screen and (max-width: 500px)
+{
+   #mediagallery
+    {
+        margin-left: -70px; /*left margin of content*/
+    }
+    
+}
+
+/*On smaller screens, adjusting pictures in 'my gallery'*/
+@media only screen and (max-width: 500px)
+{
+    .width
+    {
+        border-radius: 50px;  /*round corners*/
+        width: 380px; /*width of pictures*/
+        height: 300px;   /*height of pictures*/
+        margin-left: -110px; /*left margin of pictures*/
+    }
+}
+
+/*On smaller screens, adjusting <figcaption> text style*/
+@media only screen and (max-width: 500px)
+{
+    .imageInfo
+    {
+        margin-left: -100px; /*left margin of content*/
+    }
+}
+
+/*On smaller screens, adjusting The dots/circles/indicators */
+@media only screen and (max-width: 500px)
+{
+    .dot
+    {
+        margin: -1px; /*all 4 margins are -1px*/
+    }
+}
+
+/*On smaller screens, adjusting  Next & previous buttons */
+@media only screen and (max-width: 500px)
+{
+    .prev, .next 
+    {
+        top: 28%; /*buttons from the top 30%*/
+        padding: 5px; /*generate space around buttons*/
+        font-size: 30px;  /*size of buttons*/
+    }
+}
+
+/* On smaller screens, adjusting Position of the "next button" to the right*/
+@media only screen and (max-width: 500px)
+{
+    .next
+    {
+        right: -65px;
+    }
+}
+
+/* On smaller screens, adjusting Position of the "previous button" to the left*/
+@media only screen and (max-width: 500px)
+{
+    .prev
+    {
+        left: -75px;
+    }
+}
+
+/*On smaller screens, adjusting background opacity for 'difference in lifestyle and  my gallery' for heading to show clearly*/
+@media only screen and (max-width: 500px)
+{
+    .differentlifestyles, .gallery 
+    {
+        opacity: 0.85;
+    }
+}

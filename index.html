@@ -1,0 +1,600 @@
+<!--REFERENCES OF CODE I HAVE USED IN MY WEBSITE-->
+<!--
+I learnt and applied most of the HTML elements in my website and put them in my html files from w3schools:
+'HTML Element Reference', [Source code].
+Available: https://www.w3schools.com/tags/default.asp [Accessed:4-12-2017 - 27-12-2017]
+
+I used this example to implement "parallax scrolling" to my website:
+'How TO - Parallax Scrolling', [Source code]. 
+Available: https://www.w3schools.com/howto/howto_css_parallax.asp [Accessed: 19-12-2017]
+
+The map image
+I made this image using google earth:<br> [Online]. 
+Available: https://www.google.com/maps/@4.847996,17.163444,8475104m/data=!3m1!1e3  [Accessed: 10-12-2017]
+
+This is the link to the JQuery.rwdImageMaps website for the technique I used for the coordinates on my map in my index.html to adjust themselves according to the screen size. I downloaded the folders and plug-in to put in my work:
+Stow.Matt, 'jQuery RWD Image Maps' (commit afc88d0), 18-Oct-2016. [Source code].
+Available: https://github.com/stowball/jQuery-rwdImageMaps [Accessed:15-12-2017]
+
+I used this example for my gallery slideshow:
+'How TO -Slideshow', [Source code]. 
+Available: https://www.w3schools.com/howto/howto_js_slideshow.asp [Accessed:20-12-2017]
+--> 
+
+<!DOCTYPE html>
+<html lang = "en">
+    
+    <head>
+        <meta charset="utf-8"/>
+        <!-- Giving the browser instructions on how to control the page's dimensions and scaling-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        
+        <!--Defining the title in the browser toolbar-->
+        <title>My Journey</title> 
+      
+        <!--This is the link to my CSS style sheet-->
+        <link rel="stylesheet" href="css_stylesheet/myStyle.css"> 
+        
+        <!--This is the link to the external JQuery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script> 
+        
+        <!--This is the link to the external JQuery UI library-->
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"> </script> 
+        
+        <!--This is the link to the JQuery.rwdImageMaps file for the coordinates on my map in my index.html to adjust themselves according to the screen size -->
+        <script src="jQuery-rwdImageMaps/jquery.rwdImageMaps.min.js"> </script>
+        
+        <!--This is the link to my JavaScript style sheet-->
+        <script src="js_stylesheet/myScript.js"> </script>
+    </head>
+    
+    
+    <body>
+    <!--The class and id attributes are used throughout my html and have been used to style my website in the external CSS style sheet-->
+    <!--The <p> tag is used throughout my html to write the content for the website -->
+    <!--The <br> tag is used throughout my html to insert a single line break -->
+    
+        
+        <!--This <div> tag is used to define the first page and is given the class attribute 'me' for my background image-->
+        <div class="me">
+            <!--class attribute 'caption' to style headings on each page-->
+            <div class="caption">  
+                <span class="textstyle"><em>Hello, I'm</em></span>
+            </div>
+            
+            <div class="name"> <!--This <div> tag is used to define my name on the first page-->
+                <span class="textstyle"><strong>Simran Kaur</strong></span>
+            </div>
+        </div>
+
+        <!--This <div> tag is used to define the text in the first page and is given the id attribute 'workexperience' to style this section in the external CSS style sheet-->
+        <div id = "workexperience">
+            <h3>About Myself And My Work Experiences</h3> <!--The heading for this section-->
+            
+            <!--When Mwanza is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+            <p>My name is Simran Kaur. I was born in the month of December in <a href="https://en.wikipedia.org/wiki/Mwanza" target = "_blank"> Mwanza</a> which is a city in Tanzania, East Africa. I am currently studying for a degree in Computer Science at Goldsmiths, University Of London. <br>
+            
+            <p>Work Experience<br> Working life in Tanzania is considered as an adult's task. Students never look for a job unless they are graduated or if they do not wish to continue studying. On the other hand, looking for jobs in Mwanza was difficult as it was a small city and it was not highly developed economically. However when I moved to London I was amazed by the job opportunities students had while studying to enhance their experience in the practical and working world. Many students work part time whilst studying and students in year 10 get an opportunity to do work experience for 4 weeks. This strengthens their CV for future employment.</p>
+            
+            <p>When I was in year 10, I had the opportunity to do work experience. I worked as a trainee receptionist at Gilroy Court Hotel, Croydon. I found this as a useful experience because it was my first time ever in the working world and I had gained invaluable skills which included and were not limited to communication, time management and problem solving skills. I then experienced working at Battersea Pharmacy whilst studying in year 13. This again was a wonderful opportunity for me to enhance the skills I had acquired and learn new skills.</p>
+
+            <!--When Gatwick airport is clicked it opens the URL specified in the <a href> tag. 
+            The target = "_blank" ensures the linked webpage opens in a new window -->
+            <p>In January 2017, I got my first job at <a href="https://www.gatwickairport.com/" target = "_blank">Gatwick Airport</a> as a sales assistant. I was very pleased and also excited to start this new job. I have since had many different experiences as I get to meet people from around the world who belong to different cultures, religions and ethnicities everytime I go to work. </p>
+        </div>
+
+        <!--This <div> tag is used to define the second page and
+        class attribute 'tanzanialondon' for its background image-->
+        <div class="tanzanialondon">
+            <!--class attribute 'caption' to style headings on each page-->
+            <div class="caption">
+                <!--This <span> tag is used to group inline elements for every page with a background image.-->
+                <!--The class attribute 'textstyle' is used to style the heading in the external CSS sheet. Page's heading is my journey.-->
+                <span class="textstyle">My Journey</span> 
+
+            </div>
+        </div>
+        
+        <!--This <div> tag is used to define the second page where all the content is. 
+        id attribute 'infoblackbox' for the adjustment of the section which is done in external CSS sheet -->
+        <div id = "infoblackbox">
+            
+            <!--The id attribute 'mediamap' used for the media query in external CSS sheet-->
+            <p id = "mediamap">The distance between Mwanza and London is 4,205 miles. I took 3 flights, one flight was from Mwanza to Dar-es-Salaam, the second flight was from Dar-es-Salaam to Dubai and then to Gatwick airport in London.</p>
+            
+            <!--The id attribute 'hidetext' used in external CSS sheet to hide text in media query when screen size is minimised-->
+            <p id = "hidetext"> Click the aeroplane icon to read some interesting facts about each country!</p>
+            
+            <!--This <div> tag is used to define the map image in the second page. 
+            The map image taken from my files is given the id attribute 'mapimage' to style in external CSS sheet -->
+            <div>
+                <img id = "mapimage" src="images/myMap.jpg"  alt="Map showing Tanzania to London" usemap="#tanzaniatolondon"> 
+                
+                <!--<map> tag used to define image-map for clickable areas-->
+                <map name = "tanzaniatolondon">
+                    
+                    <!--Given the aeroplane icon coordinates using circle shape. 
+                    2 areas given as the id attribute for the clickable method to work-->
+                    <area id = "area1" title = "Tanzania" shape = "circle" coords ="1360,785,10">
+                    <area id = "area2" title = "London" shape = "circle" coords ="970,78,10">
+                </map>
+            </div>
+            
+            <!--This <div> tag is used to put content in the dialog boxes for each country. id attribute used for JQuery-->
+            <!--class attribute used for showing text only when aeroplane icon is clicked-->
+            <div class = "hidetext" id="dialog1">
+                <h4>Interesting facts</h4> <!--The heading for the dialog box-->
+                <p>Tanzania is a country in East Africa. The national language is Swahili. <br>The capital city of Tanzania is 'Dodoma'. <br>The population in Tanzania is 51.04 million(2016).<br> 'Mount Kilimanjaro' is located in Tanzania and it is the highest mountain in Africa. Tanzania has more than 4 million wild animals and representatives of 430 species and subspecies and is therefore famous for its National parks. It also has the world’s largest volcanic crater, 'Ngorongoro'. <br>Tanzania lies south of the equator so it has a tropical climate.</p>
+            </div>
+            
+            <!--This <div> tag is used to put content in the dialog boxes for each country. id attribute used for JQuery-->
+            <!--class attribute used for showing text only when aeroplane icon is clicked-->
+            <div class = "hidetext" id="dialog2">
+                <h4>Interesting facts</h4> <!--The heading for the dialog box--> 
+                <p>London is on the southeast of England and is the capital city of England. <br>The population in London is 8.788 million(2016). <br>It is famous for its tourist attractions such as 'London Eye', 'Big Ben' and 'Buckingham Palace'. <br>The double-decker bus is an icon of London. The tallest building in London is 'The Shard'. <br> River Thames flows through London and is the longest river in England.</p>
+            </div>
+        </div>
+        
+        <!--This <div> tag is used to define the third page and
+        class attribute 'myschool' for its background image-->
+        <div class="myschool">
+            
+            <!--class attribute 'caption' to style headings on each page-->
+            <div class="caption">
+                
+                 <!--This <span> tag is used to group inline elements for every page with a background image.-->
+                <!--The class attribute 'textstyle' is used to style the heading in the external CSS sheet. Page's heading is school life.-->
+                <span class="textstyle"> School Life</span>
+            </div>
+        </div>
+        
+        <!--This <div> tag is used to define the third page where all the content is. 
+        class attribute 'infoaboutschool' for the adjustment of the section which is done in external CSS sheet -->
+        <div class ="infoaboutschool">
+            
+            <!--class attribute 'educationDiv' to style images in external CSS-->
+            <div class="educationDiv">
+                <!--When school image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <a href = "http://www.agakhanschools.org/Tanzania/AKNSM/Index" target = "_blank"> <img src="images/agakhanNurserySchool.png" alt="Agakhan Nursery School"> </a> 
+                 <!--class attribute 'education' to style content in external CSS-->
+                <p class="education">My first day at school was in the year 2000 when I was 3 years old. I attended Agakhan Nursery School until the year 2002. Click on the image for more information about the school.</p>
+            </div>
+                
+            <!--class attribute 'educationDiv' to style images in external CSS-->
+            <div class="educationDiv">
+                <!--When school image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <a href = "http://www.isamiloschool.org/" target = "_blank"><img src="images/isamiloInternationalSchool.png" alt="Isamilo International School"> </a>
+                <!--class attribute 'education' to style content in external CSS-->
+                <p class="education">I then went to Isamilo International School for Reception class from September 2002 until June 2003. Reception class is the second stage after nursery school in Tanzania. I now had a foundation built of early childhood education before I began compulsory education at primary school level. I commenced primary school education in September 2003 at the same school. Click on the image for more information about the school.</p>
+            </div>
+                
+            <!--class attribute 'educationDiv' to style images in external CSS-->
+            <div class="educationDiv">
+                <!--When school image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <img src="images/lakePrimarySchool.png" alt="Lake Primary School"> 
+                <!--class attribute 'education' to style content in external CSS-->
+                <p class="education">In 2005 I was in year 3 when I had to leave the school due to unforeseen circumstances. I therefore changed my school and went to a government school Lake Primary School to continue my primary education until 2010. I successfully passed my year 7 exams which are compulsory inorder to continue secondary education. In September 2010 I got a place at a secondary school Lake Secondary School. In Tanzania primary school was from year 1 to year 7 unlike the United Kindgdom, where year 7 is considered as secondary school.</p>
+            </div>
+           
+        
+            <!--class attribute 'educationDiv' to style images in external CSS-->
+            <div class="educationDiv">
+                <!--When school image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <a href = "http://www.virgofidelis.org.uk/" target = "_blank"><img src="images/virgoFidelis.jpg" alt="Virgo Fidelis Convent Senior School"></a> 
+                <!--class attribute 'education' to style content in external CSS-->
+                <p class="education">In December 2011, I moved to London and after a similar admissions procedure like in Tanzania, I got into a school Virgo Fidelis Convent Senior School in January 2012 and I joined year 9 where I studied until 2014. I successfully passed my GCSE exams in 2014 and I joined into Sixth form in the same school. In September 2015 when I was in year 13, I applied for further education at University for September 2016. As I studied Maths, English, Biology and Chemistry at A Levels, I thought of studying a science related course at University. After doing some research I found 2 courses that offered great potential and were courses I was interested in since secondary school. I decided to apply for Pharmacy as I had experience working at a Pharmacy during my summer holidays.  Year 13 was the most stressful year throughout my education experience since 2000. Click on the image for more information about the school.</p>
+            </div>
+                
+            <!--class attribute 'educationDiv' to style images in external CSS-->
+            <div class="educationDiv">
+                <!--When school image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <a href = "https://www.gold.ac.uk/" target = "_blank"><img src="images/goldsmiths.png" alt="Goldsmiths, University Of London"></a> 
+                <!--class attribute 'education' to style content in external CSS-->
+                <p class="education">In August 2016, I got my results, I was dissapointed with my results as I did not get the grades I needed to get into  University therefore none of the Universities accepted me. At this point I was stressed and worried however I had to do something. I started calling Universities through the clearing process. I then got an offer from Goldsmiths University of London to study Computer Science. This was the second course I had decided to study while doing my research. I started from foundation year and I am currently in my first year. Click on the image for more information about the University.</p>
+            </div>
+        </div>
+           
+        
+        <!--This <div> tag is used to define the fourth page and
+        class attribute 'schooldifferences' for its background image-->
+        <div class="schooldifferences">
+            <!--class attribute 'caption' to style headings on each page-->
+            <div class="caption">
+                <!--This <span> tag is used to group inline elements for every page with a background image.-->
+                <!--The class attribute 'textstyle' is used to style the heading in the external CSS sheet. Page's heading is school differences.-->
+                <span class="textstyle"> School Differences</span>
+            </div>
+        </div>
+        
+    <!--This <div> tag is used to define the fourth page where all the content is. 
+     class attribute 'infoaboutschool' for the adjustment of the section which is done in external CSS sheet-->
+    <div class ="infoaboutschool">
+        <!--class attribute 'educationDiv' to style images in external CSS-->
+        <div class="educationDiv">
+            <h1>Tanzania</h1> <!--The heading for this section-->
+            <h2>What was the admissions procedure for secondary school?</h2>  <!--The heading for this section-->
+            <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+            <p class = "mediaeducation">I had to take a Maths and English exam and the results were compared to other students taking the same test. The schools choose the top 50 students and the classes are divided into 2 with 25 students each.</p>
+                    
+            <h2>How strict were teachers and how disciplined were their students?</h2> <!--The heading for this section--> 
+            <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+            <p class = "mediaeducation">In Tanzania failing an exam or even a class test was taken into account which meant being punished with sticks! If a student scored below 30% it was considered as failing and so the student would be disciplined with a punishement of sticks on the palm of their hand! This was not just to do with failing exams or tests but making noise in the class or disrespecting a teacher was taken into consideration. This clearly was done so that students studied hard and also stayed disciplined <br> I have experienced being punished with sticks however I was a disciplined student and liked by my teachers. I experienced this form of punishment on two instances, once when the whole class was making noise and another time was when I scored low marks in a Maths test. It was painful but I feel it did help me study hard for future class tests however getting beaten because of the class making noise was never justified.</p>
+                    
+            <h2>Techniques used in teaching</h2> 
+            <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+            <p class = "mediaeducation">The teachers wrote on blackboards using chalks and the students would copy down everything written on the blackboards. There were textbooks but  those were used only for revising during exams and for questions given for homework.</p>
+                    
+            <h2>Transport to school</h2> <!--The heading for this section-->
+            <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+            <p class = "mediaeducation">I used to go to school by a private bus that was only for my school. Sometimes the bus would break down or the driver was ill so I had to go to school or come back home walking which was not difficult as my house was not far from the school and as the weather was always pleasant I enjoyed walking. There was other ways of getting to school such as the public buses or by car or by bicycle.</p>
+                        
+            <h2>Sport activities</h2> <!--The heading for this section-->
+            <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+            <p class = "mediaeducation">We had physical activities as part of the school curriculum. We always used to have outdoor sports because it was always warm unless if it rained the lesson would be cancelled. We played competing games where all the class could take part. Some of the games were swimming, football, cricket, a variety of racing games and dodge ball.</p>
+                    
+            <h2>Social Life at school</h2> <!--The heading for this section-->
+            <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+            <p class = "mediaeducation">At primary school when it was your birthday you were allowed to wear clothes of your own choice rather than the school uniform to make your day even more special. Also you would take a cake and cut it with your classmates. This was a good way of interacting with your teachers and classmates and it also made you feel special.</p>
+     </div>
+            <!--class attribute 'educationDiv' to style images in external CSS-->
+            <div class="educationDiv">
+                <h1>London</h1> <!--The heading for this section-->
+                <h2>My first day at school</h2> <!--The heading for this section-->
+                <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+                <p class = "mediaeducation">I had a negative experience when I went to school for the first time in London. I did not fit in as I felt I was different from the others because of the different school environment in Tanzania compared to London. I felt insecure because some students were laughing at me whereas many students surrounded me and it made me feel like I was the centre of attention but not in a positive way.</p>
+                        
+                <h2>Techniques used in teaching</h2>  <!--The heading for this section-->
+                <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+                <p class = "mediaeducation">The teachers either write on whiteboards using whiteboard markers or they use smartboards which is the latest technology. It connects to the computer and the teacher can display presentation slides of notes for students to copy down or to follow along as the topic is explained.</p>
+                        
+                <h2>Transport to school</h2> <!--The heading for this section-->
+                <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+                <p class = "mediaeducation">I went to school by public transport which is the common and most convenient way of transport in London. I had to take two buses to get to school. I found it very difficult for the first few months as I had never been on public transport since I moved to London. The buses were always packed with school children and sometimes the people on the buses were quite rude and unpolite as they would push into me or try to squeeze in even though there was no space! This experience on the public transport did put me off but I got accustomed to the morning and evening chaos on the buses after a while.</p>
+                    
+                <h2>Sport activities</h2> <!--The heading for this section-->
+                <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+                <p class = "mediaeducation">We had physical activities as part of the school curriculum similar to Tanzania. However unlike Tanzania, we had indoor sports because of the unpredictable weather in London. We played competitive games where all the class could take part. Some of the games were basketball, netball, badminton, table tennis and dodge ball. During summer we did have outdoor activities.</p>
+          </div>
+    </div>
+
+
+        <!--This <div> tag is used to define the fifth page and
+        class attribute 'placestravelled' for its background image-->
+        <div class="placestravelled">
+            <!--class attribute 'caption' to style headings on each page-->
+            <div class="caption">
+                <!--This <span> tag is used to group inline elements for every page with a background image.-->
+                <!--The class attribute 'textstyle' is used to style the heading in the external CSS sheet. Page's heading is My Holidays In Tanzania And London-->
+                <span class="textstyle"> My Holidays In Tanzania And London</span>
+            </div>
+        </div>
+        
+        <!--This <div> tag is used to define the fifth page where all the content is. 
+        class attribute 'infoaboutholidays' for the adjustment of the section which is done in external CSS sheet-->
+        <div id ="infoaboutholidays">
+            <!--class attribute 'holidayDiv' to style images in external CSS-->
+            <div class="holidayDiv">
+                <!--When this image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <a href = "https://africantourer.com/attraction/bismarck-rock" target = "_blank"> <img src="images/bismarckRock.jpg" alt="Bismarck Rock"> </a>
+                <!--class attribute 'holidays' to style content in external CSS-->
+                <p class = "holidays">In Tanzania school term starts in January and ends in November so as a family we would go on holidays in November. As Tanzania is known for its natural beauty there are many local attractions around Mwanza City.<br> Firstly the "famous icon of the city - featuring in many photos for both locals and tourists" the Bismarck Rock which is in Lake Victoria. There were walking paths around the lake with restaurants and this place was named the "lakeside" by the locals. We would go to the lakeside every Sunday evening to have ice cream and take in the fresh air. Click on the image for more information.</p>
+            </div>
+                
+            <!--class attribute 'holidayDiv' to style images in external CSS-->
+            <div class="holidayDiv">
+                <!--When this image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <a href = "https://en.wikipedia.org/wiki/Serengeti_National_Park" target = "_blank"> <img src="images/serengeti.jpg" alt="Serengeti National Park"> </a>
+                <!--class attribute 'holidays' to style content in external CSS-->
+                <p class = "holidays">The famous and largest national park in Tanzania is Serengeti National Park. This national park is abundant with wildlife and has amazing natural scenery! During my school holidays my family and our friends would go to the National Park for 3 - 4 days. We would drive to and from Serengeti with several breaks in between. We would stay at <a href="http://www.serengetiexpedition.com/hotel/protea" target = "_blank">Kijereshi Tented Camp</a> which was on the way to Serengeti National Park that provided accomodation and restaurants for tourists. There are driving paths through the national park and the animals can be seen in their natural habitat. I have seen many animals and birds at the national park which included giraffes, lions, buffaloes, zebras, monkeys, crocodiles and elephants. Serengeti National Park was my favourite holiday destination. Click on the image for more information.</p>
+            </div>
+                
+            <!--class attribute 'holidayDiv' to style images in external CSS-->
+            <div class="holidayDiv">
+                <!--When this image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <a href = "https://africantourer.com/national-park/saa-nane" target = "_blank"> <img src="images/saananeIsland.jpg" alt="Saa-nane Island"> </a>
+                <!--class attribute 'holidays' to style content in external CSS-->
+                <p class = "holidays">I have also been to a famous small man-made island on Lake Victoria called Saa-nane Island in Tanzania. This island is a picnic spot for families and friends and it also has wildlife but the animals were caged just like a zoo. We would go to the island by boat which was the most convenient way of getting to the island and spend a whole day. There are restaurants and footpaths on the island to walk around and enjoy the beautiful scenery. Click on the image for more information.</p>  
+            </div>
+                
+            <!--class attribute 'holidayDiv' to style images in external CSS-->
+            <div class="holidayDiv">
+                <!--When this image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <a href = "https://www.visitcumbria.com/wc/silloth/" target = "_blank"> <img src="images/keswick.jpg" alt="Beautiful scenery at Keswick, Lake District"> </a>
+                <!--class attribute 'holidays' to style content in external CSS-->
+                <p class = "holidays">I was amazed by the natural scenery and wildlife in Tanzania since my childhood. Moving to London felt as if I had lost the feel of fresh air around me. So, my family and I went on a holiday to Lake district, Cumbria for 5 days. The views and natural scenery were stunning. We stayed in a caravan in Silloth and travelled around the area. Some places we visited were the Lake District National Park, Keswick Lake cruise and Maryport. This was a breathtaking experience because  we were surrounded by mountain and highland views wherever we went. Click on the image for more information.</p>  
+            </div>
+                
+            <!--class attribute 'holidayDiv' to style images in external CSS-->
+            <div class="holidayDiv">
+                <!--When this image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <a href = "https://www.visitlondon.com/things-to-do/sightseeing/london-attraction#6fe6eUtLCMWVquAx.97" target = "_blank"> <img src="images/london.png" alt="London city"> </a>
+                <!--class attribute 'holidays' to style content in external CSS-->
+                <p class = "holidays">When I moved to London I travelled to a few local places. London is the capital city of England and is known for its multi-culture and man-made attractive places. I went to Central London and I saw and experienced some of the famous tourist attractions: the Buckingam Palace, the London Eye, Big Ben, Hop-On Hop-Off Bus tour, the River Thames cruise and Victoria and Albert Museum. These were beautiful attractions to visit and it was quite a different experience to Tanzania where one can enjoy natural scenery and unspoilt views as attractions for tourists. Click on the image for more information.</p>  
+            </div>
+                
+            <!--class attribute 'holidayDiv' to style images in external CSS-->
+            <div class="holidayDiv">
+                <!--When this image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                <a href = "https://www.oxfordstreet.co.uk/" target = "_blank"> <img src="images/oxfordstreet.png" alt="Oxford Street"> </a>
+                <!--class attribute 'holidays' to style content in external CSS-->
+                <p class = "holidays"> I also went to Oxford Street which is a long street of shopping malls with hundreds of high street stores and is therefore a favorite tourist shopping spot. Compared to Tanzania there are a variety of shopping malls in London and many different brands of clothes, shoes and accessories to choose from which is a different, overwhelming and amazing experience. Click on the image for more information.</p>  
+            </div>
+                
+            <!--class attribute 'holidayDiv' to style images in external CSS-->
+            <div class="holidayDiv">
+                <!--class attribute 'mediaeducation' used in external CSS to adjust content when screen minimised-->
+                <p id = "mediaholidays"> When I moved to London I got the opportunity to travel to Punjab in Northern India and Canada because it was a shorter distance to travel to these destinations whereas in Tanzania I visited only nearby countries such as Kenya. </p>  
+            </div>   
+        </div>
+       
+        
+         <!--This <div> tag is used to define the fifth page and
+        class attribute 'differentlifestyles' for its background image-->
+        <div class="differentlifestyles">
+            <!--class attribute 'caption' to style headings on each page-->
+            <div class="caption">
+                <!--This <span> tag is used to group inline elements for every page with a background image.-->
+                <!--The class attribute 'textstyle' is used to style the heading in the external CSS sheet. Page's heading is difference in lifestyle-->
+                <span class="textstyle"> Difference In Lifestyle</span>
+            </div>
+        </div>
+            <!--This <div> tag is used to define the sixth page where all the content is. 
+            class attribute 'infoaboutholidays' for the adjustment of the section which is done in external CSS sheet-->
+            <div id ="infoaboutlifestyle">
+                <!--class attribute 'lifestyleDiv' to style images in external CSS-->
+                <div class="lifestyleDiv">
+                     <!--When this image is clicked it opens the URL specified in the <a href> tag. The target = "_blank" ensures the linked webpage opens in a new window -->
+                     <a href = "https://www.nhs.uk/aboutnhschoices/pages/nhschoicesintroduction.aspx" target = "_blank"> <img src="images/nhsLogo.png" alt="The NHS logo"> </a>
+                     <!--class attribute 'lifestyle' to style content in external CSS-->
+                     <p class = "lifestyle">Compared to Tanzania, London is known for its health services i.e. NHS. In Tanzania getting any medical advice or going to the doctor was quite expensive regardless of your age. There were limited resources, doctors and hospitals and critically ill patients would have to be transferred to hospitals outside the region and sometimes country. When I moved to London I was impressed by the health care citizens recieve including 24 hours access to emergency services. Click on the image for more information.</p>
+                </div>
+                
+                <!--class attribute 'lifestyleDiv' to style images in external CSS-->
+                 <div class="lifestyleDiv">
+                     <img src="images/neighbourhood.png" alt="A picture of houses in a street">
+                     <!--class attribute 'lifestyle' to style content in external CSS-->
+                     <p class = "lifestyle">In Tanzania having neighbours was uncommon as the houses were big and people built their houses at a distance from each other however there were flats as well. I lived and grew up in a house surrounded by a community so since my childhood I have learnt to communicate and interact with my neighbours and community. When I moved to London, I noticed that almost everyone is busy with their own lives and even though everyone has neighbours it is rare to see each other or even know one another but in Tanzania I would see my neighbours on a regular basis. This was a bit odd for me when I came to London but I understand this behaviour now since I too have become so busy and captured in the fast pace of life.</p>
+                </div>   
+            </div>
+        
+        <!--This <div> tag is used to define the fifth page and
+        class attribute 'gallery' for its background image-->
+        <div class="gallery">
+            <!--class attribute 'caption' to style headings on each page-->
+            <div class="caption">
+                <!--This <span> tag is used to group inline elements for every page with a background image.-->
+                <!--The class attribute 'textstyle' is used to style the heading in the external CSS sheet. Page's heading is my gallery-->
+                <span class="textstyle"> My Gallery</span>
+            </div>
+        </div>
+        
+            <!--This <div> tag is used to define the sixth page where all the content is. 
+            class attribute 'infoaboutgallery' for the adjustment of the section which is done in external CSS sheet-->
+            <div id ="infoaboutgallery">
+                <div>
+                    <!--class attribute 'mediagallery' used in external CSS to adjust content when screen minimised-->
+                     <p id = "mediagallery">Scroll through the slideshow and see my memories!</p>
+                     
+                     <!--class attribute used in external CSS to make images same size-->
+                     <div class="slideshow-container">
+                         
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                         <div class = "mySlides fade">
+                             <!--The <figure> tag to specify the image-->
+                             <figure>
+                                 <img src = "images/agakhanNurserySchool.png"  alt = "Agakhan Nursery School"   class = "width">
+                                 <figcaption class = "imageInfo"> Figure 1/16 - This is Agakhan Nursery School which was the first school I attended in Tanzania.</figcaption>
+                             </figure>
+                        </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                         <div class="mySlides fade">
+                            <!--The <figure> tag to specify the image-->
+                            <figure>
+                                <img src="images/isamiloInternationalSchool.png"  alt = "Isamilo International School"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 2/16 - This is Isamilo International School in Tanzania.</figcaption>
+                            </figure>
+                        </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                        <div class="mySlides fade">
+                            <figure>
+                                <img src="images/lakePrimarySchool.png"  alt = "Lake Primary School"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 3/16 - This is Lake Primary School in Tanzania.</figcaption>
+                            </figure>
+                        </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                        <div class="mySlides fade">
+                            <!--The <figure> tag to specify the image-->
+                             <figure>
+                                <img src="images/lakeSecondarySchool.png"  alt = "Lake Secondary School"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 4/16 - This is Lake Secondary School in Tanzania.</figcaption>
+                             </figure>
+                        </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                        <div class="mySlides fade">
+                            <!--The <figure> tag to specify the image-->
+                            <figure>
+                                <img src="images/mySchoolBus.png"  alt = "My School Bus"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 5/16 - This was my private school bus in Tanzania.</figcaption>
+                            </figure>
+                        </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                        <div class="mySlides fade">
+                            <!--The <figure> tag to specify the image-->
+                            <figure>
+                                <img src="images/myBirthdayAtSchool.jpg"  alt = "My Birthday at Primary School"  class = "width" >
+                                <figcaption class = "imageInfo"> Fig. 6/16 - This photograph was taken by my mother's friend when I celebrated my birthday at school with the whole class in Tanzania.</figcaption>
+                            </figure>
+                        </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                        <div class = "mySlides fade">
+                            <!--The <figure> tag to specify the image-->
+                            <figure>
+                                <img src = "images/publicTransportInLondon.jpg" alt = "Public transport"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 7/16 - I went to school by public bus in London.</figcaption>
+                            </figure>
+                        </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                        <div class="mySlides fade">
+                            <!--The <figure> tag to specify the image-->
+                            <figure>
+                                <img src="images/virgoFidelis.jpg"  alt = "Virgo Fidelis Convent Senior School"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 8/16 - I went to Virgo Fidelis Convent Senior School when I moved to London.</figcaption>
+                            </figure>
+                        </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                        <div class="mySlides fade">
+                            <!--The <figure> tag to specify the image-->
+                            <figure>
+                                <img src="images/goldsmiths.png"  alt = "Goldsmiths, University Of London"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 9/16 - I am currently studying at Goldsmiths, University Of London.</figcaption>
+                            </figure>
+                         </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                        <div class="mySlides fade">
+                            <!--The <figure> tag to specify the image-->
+                            <figure>
+                                <img src="images/elephantsAtNationalPark.jpg"  alt = "A photograph of elephants in a distance at Serengeti National Park taken by my father"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 10/16 - A photograph of elephants in a distance at Serengeti National Park taken by my father.</figcaption>
+                            </figure>
+                        </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                        <div class="mySlides fade">
+                            <!--The <figure> tag to specify the image-->
+                            <figure>
+                                <img src="images/hippoSerengeti.jpg"  alt = "A photograph of a hippopatamus crossing the road at Serengeti National Park taken by my father"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 11/16 - A photograph of a hippopatamus crossing the road at Serengeti National Park taken by my father.</figcaption>
+                            </figure>
+                        </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                         <div class="mySlides fade">
+                             <!--The <figure> tag to specify the image-->
+                             <figure>
+                                <img src="images/zebrasSerengeti.jpg" alt = "A photograph of zebras in a distance at Serengeti National Park taken by my father"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 12/16 - A photograph of zebras in a distance at Serengeti National Park taken by my father.</figcaption>
+                             </figure>
+                         </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                         <div class="mySlides fade">
+                             <!--The <figure> tag to specify the image-->
+                             <figure>
+                                <img src="images/lionAtADistance.jpg" alt = "A photograph of a lion in a distance at Serengeti National Park taken by my father"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 13/16 - A photograph of a lion in a distance at Serengeti National Park taken by my father.</figcaption>
+                             </figure>
+                         </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                         <div class="mySlides fade">
+                             <!--The <figure> tag to specify the image-->
+                             <figure>
+                                <img src="images/lionCagedInSaanane.jpg" alt = "A photograph of a lion caged at Saa-nane Island taken by me"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 14/16 - A photograph of a lion caged at Saa-nane Island taken by me.
+                                </figcaption>
+                             </figure>
+                         </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                        <div class="mySlides fade">
+                            <!--The <figure> tag to specify the image-->
+                            <figure>
+                                <img src="images/ourCaravan.jpg" alt = "A photograph taken by me of the caravan I stayed in during my holidays in Lake District"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 15/16 - A photograph taken by me of the caravan I stayed in during my holidays in Lake District.</figcaption>
+                            </figure>
+                         </div>
+
+                         <!--<div> tag for each image.
+                         class attribute used in external CSS to make images hide by default and fade images-->
+                         <div class="mySlides fade">
+                             <!--The <figure> tag to specify the image-->
+                             <figure>
+                                <img src="images/keswick.jpg" alt = "A photograph of the beautiful scenery at Keswick taken by me"  class = "width">
+                                <figcaption class = "imageInfo"> Fig. 16/16 - A photograph of the beautiful scenery at Keswick taken by me while on a boat cruise.</figcaption>
+                             </figure>
+                         </div>
+                         
+                      <!--next and previous buttons in the slideshow-->
+                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                         
+                    </div>
+                    <br>
+                    
+                    <!-- The dots/circles for choosing the next picture -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span> 
+                        <span class="dot" onclick="currentSlide(2)"></span> 
+                        <span class="dot" onclick="currentSlide(3)"></span> 
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                        <span class="dot" onclick="currentSlide(6)"></span>
+                        <span class="dot" onclick="currentSlide(7)"></span>
+                        <span class="dot" onclick="currentSlide(8)"></span>
+                        <span class="dot" onclick="currentSlide(9)"></span>
+                        <span class="dot" onclick="currentSlide(10)"></span>
+                        <span class="dot" onclick="currentSlide(11)"></span>
+                        <span class="dot" onclick="currentSlide(12)"></span>
+                        <span class="dot" onclick="currentSlide(13)"></span>
+                        <span class="dot" onclick="currentSlide(14)"></span>
+                        <span class="dot" onclick="currentSlide(15)"></span>
+                        <span class="dot" onclick="currentSlide(16)"></span>
+                    </div>
+                </div>
+            </div>
+
+        <!--script tage for javascript code-->
+        <script>
+            
+            //these functions open a JQuery dialog box. dialog1 and dialog2 are id attributes with the content in them 
+            //area1 and area2 are id attributes in the <map> tag and are being called when a specific aeroplane icon is clicked
+            //area1 works tanzania is clicked and area2 works when london is clicked. 
+            
+            document.getElementById('area1').onclick =  function()
+            {
+                $("#dialog1" ).dialog();
+                
+            } ;
+        
+            document.getElementById('area2').onclick =  function()
+            {
+                $( "#dialog2" ).dialog();
+            }; 
+            
+            
+            //calling the function for the clickable map image to work when an aeroplane icon is clicked from myScript.js
+            $('img[usemap]').rwdImageMaps(); 
+            
+            
+            //calling the slideshow function from myScript.js
+            var slideIndex = 1;
+            showSlides(slideIndex);
+            
+        </script>
+        
+    </body>
+</html>
